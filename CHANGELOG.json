@@ -1,0 +1,38 @@
+{
+  "ir_version": "1.0",
+  "project": "omniretrieve",
+  "repository": "https://github.com/agentplexus/omniretrieve",
+  "releases": [
+    {
+      "version": "0.1.0",
+      "date": "2026-01-11",
+      "highlights": [
+        { "description": "Initial release of OmniRetrieve - a unified retrieval library for Go" },
+        { "description": "Support for Vector RAG, Graph RAG, and Hybrid retrieval strategies" }
+      ],
+      "added": [
+        { "description": "feat: Core retrieval interfaces (`Retriever`, `Query`, `Result`, `ContextItem`)" },
+        { "description": "feat: Vector retrieval with `Index`, `BatchIndex`, and `IndexManager` interfaces" },
+        { "description": "feat: Graph retrieval with `KnowledgeGraph` and `GraphManager` interfaces" },
+        { "description": "feat: Hybrid retrieval with configurable policies (`Parallel`, `VectorThenGraph`, `GraphThenVector`)" },
+        { "description": "feat: Observability support with span tracing (Phoenix, Opik, Langfuse compatible)" },
+        { "description": "feat: Reranking support (`CrossEncoder`, `Heuristic`, `Chain`)" },
+        { "description": "feat: In-memory implementations for testing (`VectorIndex`, `KnowledgeGraph`, `HashEmbedder`)" },
+        { "description": "feat(providers): pgvector provider with HNSW/IVFFlat index types" },
+        { "description": "feat(providers): Batch operations via COPY and multi-row INSERT" },
+        { "description": "feat(providers): JSONB metadata filtering support" }
+      ],
+      "documentation": [
+        { "description": "docs: Add README with quick start guide and examples" },
+        { "description": "docs: Add PRD (Product Requirements Document)" },
+        { "description": "docs: Add TRD (Technical Requirements Document)" }
+      ],
+      "build": [
+        { "description": "chore: Add GitHub Actions CI for multi-module testing" },
+        { "description": "chore: Add GitHub Actions lint workflow with golangci-lint" },
+        { "description": "chore: Add CodeQL security analysis" },
+        { "description": "chore: Add golangci-lint configuration" }
+      ]
+    }
+  ]
+}
