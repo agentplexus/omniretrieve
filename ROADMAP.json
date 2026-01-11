@@ -1,0 +1,340 @@
+{
+  "ir_version": "1.0",
+  "project": "OmniRetrieve",
+  "repository": "https://github.com/agentplexus/omniretrieve",
+  "generated_at": "2026-01-11T00:00:00Z",
+
+  "legend": {
+    "completed": {"emoji": "✅", "description": "Completed"},
+    "in_progress": {"emoji": "🚧", "description": "In Progress"},
+    "planned": {"emoji": "📋", "description": "Planned"},
+    "future": {"emoji": "💡", "description": "Under Consideration"}
+  },
+
+  "areas": [
+    {"id": "core", "name": "Core Features", "priority": 1},
+    {"id": "providers", "name": "Provider Implementations", "priority": 2},
+    {"id": "observability", "name": "Observability", "priority": 3},
+    {"id": "performance", "name": "Performance & Optimization", "priority": 4},
+    {"id": "advanced", "name": "Advanced Features", "priority": 5}
+  ],
+
+  "phases": [
+    {
+      "id": "v0.1.0",
+      "name": "v0.1.0: Foundation",
+      "status": "completed",
+      "order": 1,
+      "description": "Core interfaces and essential implementations"
+    },
+    {
+      "id": "v0.2.0",
+      "name": "v0.2.0: Production Ready",
+      "status": "planned",
+      "order": 2,
+      "description": "Additional providers, enhanced observability, and performance optimizations"
+    },
+    {
+      "id": "v0.3.0",
+      "name": "v0.3.0: Advanced Features",
+      "status": "future",
+      "order": 3,
+      "description": "Streaming, caching, query planning, and additional graph providers"
+    }
+  ],
+
+  "items": [
+    {
+      "id": "core-interfaces",
+      "title": "Core Retrieval Interfaces",
+      "description": "Retriever, Query, Result, ContextItem, Observer interfaces",
+      "status": "completed",
+      "version": "0.1.0",
+      "completed_date": "2026-01-11",
+      "area": "core",
+      "type": "Added",
+      "phase": "v0.1.0",
+      "priority": "high"
+    },
+    {
+      "id": "vector-retrieval",
+      "title": "Vector Retrieval",
+      "description": "Index, BatchIndex, IndexManager, Embedder interfaces with VectorRetriever implementation",
+      "status": "completed",
+      "version": "0.1.0",
+      "completed_date": "2026-01-11",
+      "area": "core",
+      "type": "Added",
+      "phase": "v0.1.0",
+      "priority": "high"
+    },
+    {
+      "id": "graph-retrieval",
+      "title": "Graph Retrieval",
+      "description": "KnowledgeGraph, GraphManager interfaces with GraphRetriever implementation",
+      "status": "completed",
+      "version": "0.1.0",
+      "completed_date": "2026-01-11",
+      "area": "core",
+      "type": "Added",
+      "phase": "v0.1.0",
+      "priority": "high"
+    },
+    {
+      "id": "hybrid-retrieval",
+      "title": "Hybrid Retrieval",
+      "description": "Configurable policies: Parallel, VectorThenGraph, GraphThenVector with weighted merging",
+      "status": "completed",
+      "version": "0.1.0",
+      "completed_date": "2026-01-11",
+      "area": "core",
+      "type": "Added",
+      "phase": "v0.1.0",
+      "priority": "high"
+    },
+    {
+      "id": "reranking",
+      "title": "Reranking Support",
+      "description": "CrossEncoder, Heuristic (RRF, min-score), and Chain rerankers",
+      "status": "completed",
+      "version": "0.1.0",
+      "completed_date": "2026-01-11",
+      "area": "core",
+      "type": "Added",
+      "phase": "v0.1.0",
+      "priority": "medium"
+    },
+    {
+      "id": "memory-implementations",
+      "title": "In-Memory Implementations",
+      "description": "VectorIndex, KnowledgeGraph, HashEmbedder for testing and development",
+      "status": "completed",
+      "version": "0.1.0",
+      "completed_date": "2026-01-11",
+      "area": "core",
+      "type": "Added",
+      "phase": "v0.1.0",
+      "priority": "medium"
+    },
+    {
+      "id": "pgvector",
+      "title": "pgvector Provider",
+      "description": "PostgreSQL pgvector with HNSW/IVFFlat, batch operations, JSONB metadata filtering",
+      "status": "completed",
+      "version": "0.1.0",
+      "completed_date": "2026-01-11",
+      "area": "providers",
+      "type": "Added",
+      "phase": "v0.1.0",
+      "priority": "high"
+    },
+    {
+      "id": "observability-spans",
+      "title": "Span Tracing",
+      "description": "Observer with span types for retrieval, vector.search, graph.traverse, rerank",
+      "status": "completed",
+      "version": "0.1.0",
+      "completed_date": "2026-01-11",
+      "area": "observability",
+      "type": "Added",
+      "phase": "v0.1.0",
+      "priority": "medium"
+    },
+    {
+      "id": "pinecone",
+      "title": "Pinecone Provider",
+      "description": "Pinecone vector database integration",
+      "status": "planned",
+      "target_version": "0.2.0",
+      "area": "providers",
+      "type": "Added",
+      "phase": "v0.2.0",
+      "priority": "high",
+      "tasks": [
+        {"description": "Implement Index interface", "completed": false},
+        {"description": "Implement BatchIndex interface", "completed": false},
+        {"description": "Add namespace support", "completed": false}
+      ]
+    },
+    {
+      "id": "weaviate",
+      "title": "Weaviate Provider",
+      "description": "Weaviate vector database integration",
+      "status": "planned",
+      "target_version": "0.2.0",
+      "area": "providers",
+      "type": "Added",
+      "phase": "v0.2.0",
+      "priority": "medium",
+      "tasks": [
+        {"description": "Implement Index interface", "completed": false},
+        {"description": "Implement BatchIndex interface", "completed": false},
+        {"description": "Support hybrid search", "completed": false}
+      ]
+    },
+    {
+      "id": "neo4j",
+      "title": "Neo4j Provider",
+      "description": "Neo4j graph database integration",
+      "status": "planned",
+      "target_version": "0.2.0",
+      "area": "providers",
+      "type": "Added",
+      "phase": "v0.2.0",
+      "priority": "high",
+      "tasks": [
+        {"description": "Implement KnowledgeGraph interface", "completed": false},
+        {"description": "Implement GraphManager interface", "completed": false},
+        {"description": "Cypher query generation", "completed": false}
+      ]
+    },
+    {
+      "id": "phoenix-exporter",
+      "title": "Phoenix Exporter",
+      "description": "Native Arize Phoenix observability exporter",
+      "status": "planned",
+      "target_version": "0.2.0",
+      "area": "observability",
+      "type": "Added",
+      "phase": "v0.2.0",
+      "priority": "medium"
+    },
+    {
+      "id": "opik-exporter",
+      "title": "Opik Exporter",
+      "description": "Comet Opik observability exporter",
+      "status": "planned",
+      "target_version": "0.2.0",
+      "area": "observability",
+      "type": "Added",
+      "phase": "v0.2.0",
+      "priority": "medium"
+    },
+    {
+      "id": "langfuse-exporter",
+      "title": "Langfuse Exporter",
+      "description": "Langfuse observability exporter",
+      "status": "planned",
+      "target_version": "0.2.0",
+      "area": "observability",
+      "type": "Added",
+      "phase": "v0.2.0",
+      "priority": "medium"
+    },
+    {
+      "id": "benchmarks",
+      "title": "Comprehensive Benchmarks",
+      "description": "Performance benchmarks for hot paths: search, embedding serialization, result merging",
+      "status": "planned",
+      "target_version": "0.2.0",
+      "area": "performance",
+      "type": "Added",
+      "phase": "v0.2.0",
+      "priority": "medium",
+      "tasks": [
+        {"description": "Vector search benchmarks", "completed": false},
+        {"description": "Batch operation benchmarks", "completed": false},
+        {"description": "Memory allocation profiling", "completed": false}
+      ]
+    },
+    {
+      "id": "streaming",
+      "title": "Streaming Results",
+      "description": "StreamingRetriever interface for incremental result delivery",
+      "status": "future",
+      "target_version": "0.3.0",
+      "area": "advanced",
+      "type": "Added",
+      "phase": "v0.3.0",
+      "priority": "medium"
+    },
+    {
+      "id": "caching",
+      "title": "Caching Layer",
+      "description": "Optional caching for frequently accessed embeddings and results",
+      "status": "future",
+      "target_version": "0.3.0",
+      "area": "performance",
+      "type": "Added",
+      "phase": "v0.3.0",
+      "priority": "medium"
+    },
+    {
+      "id": "query-planning",
+      "title": "Query Planning Optimization",
+      "description": "Automatic strategy selection based on query characteristics",
+      "status": "future",
+      "target_version": "0.3.0",
+      "area": "advanced",
+      "type": "Added",
+      "phase": "v0.3.0",
+      "priority": "low"
+    },
+    {
+      "id": "neptune",
+      "title": "Amazon Neptune Provider",
+      "description": "AWS Neptune graph database integration",
+      "status": "future",
+      "target_version": "0.3.0",
+      "area": "providers",
+      "type": "Added",
+      "phase": "v0.3.0",
+      "priority": "medium"
+    },
+    {
+      "id": "multi-tenancy",
+      "title": "Multi-Tenancy Support",
+      "description": "Tenant isolation at the index level for SaaS applications",
+      "status": "future",
+      "target_version": "0.3.0",
+      "area": "advanced",
+      "type": "Added",
+      "phase": "v0.3.0",
+      "priority": "low"
+    }
+  ],
+
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "order": 1,
+      "content": [
+        {"type": "text", "value": "OmniRetrieve is a unified retrieval library for Go supporting Vector RAG, Graph RAG, and Hybrid retrieval strategies. This roadmap outlines planned features and improvements."}
+      ]
+    },
+    {
+      "id": "design-principles",
+      "title": "Design Principles",
+      "order": 2,
+      "content": [
+        {"type": "list", "items": [
+          "**Unified Interface** - Single Retriever interface works with any backend",
+          "**Strategy Flexibility** - Support vector, graph, and hybrid retrieval",
+          "**Backend Agnostic** - Swap providers without changing application code",
+          "**Observable** - Built-in tracing for debugging and optimization"
+        ]}
+      ]
+    },
+    {
+      "id": "contributing",
+      "title": "Contributing",
+      "order": 99,
+      "content": [
+        {"type": "text", "value": "Contributions are welcome! Priority areas:"},
+        {"type": "list", "items": [
+          "New provider implementations (Pinecone, Weaviate, Neo4j)",
+          "Observability exporters",
+          "Performance optimizations",
+          "Documentation and examples"
+        ]}
+      ]
+    }
+  ],
+
+  "version_history": [
+    {"version": "0.1.0", "date": "2026-01-11", "status": "completed", "summary": "Foundation - Core interfaces, pgvector provider, observability"},
+    {"version": "0.2.0", "date": null, "status": "planned", "summary": "Production Ready - Additional providers, enhanced observability, benchmarks"},
+    {"version": "0.3.0", "date": null, "status": "future", "summary": "Advanced Features - Streaming, caching, query planning, Neptune"}
+  ]
+}
