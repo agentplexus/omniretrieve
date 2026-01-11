@@ -1,0 +1,9 @@
+.DS_Store
+.env
+.claude/settings.local.json
+_*
+*.tar
+coverage.txt
+debug.test
+main
+main.zip
